@@ -46,8 +46,8 @@ for filename in os.listdir(directory):
             df = pd.read_csv(file_path, sep='\t', header=None, names=['Easting', 'Northing', 'Elevation'])
 
             # Explanation: Remove the leading '32' from the Easting values because the data is in UTM Zone 32.
-            # UTM Zone 32 data often has the zone number (32) prefixed to the Easting values.
-            # Since the Easting values represent positions within the zone, we remove this prefix to get the correct coordinates.
+            # The Easting values has a prefix 32 which represents the UTM Zone 32 data 
+            # We remove this prefix to get the correct coordinates.
             # This is standard for data from Gewässer Bund in Germany.
             df['Easting'] = df['Easting'].astype(str).str.slice(2).astype(float)
 
