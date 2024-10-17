@@ -6,7 +6,7 @@ from geocube.api.core import make_geocube
 import rasterio as rio
 import numpy as np  # Import numpy for checking infinity
 
-#Example to the data in the text files
+#Sample Data in text files
 #32398770.97	5584764.32	60.430
 #32398769.71	5584764.10	55.400
 
